@@ -1,4 +1,4 @@
-# pidnetwatch
+# packet-pid
 
 **Monitor which processes are making network connections — in real time.**  
 This tool bridges the gap Wireshark leaves by mapping each TCP stream to the responsible PID and process name using `tshark` + `ss`.
@@ -18,16 +18,16 @@ This tool bridges the gap Wireshark leaves by mapping each TCP stream to the res
 
 ```bash
 # Run on default interface (eth0) until Ctrl+C
-sudo ./pidnetwatch.sh
+sudo ./packet-pid.sh
 
 # Use a specific interface
-sudo ./pidnetwatch.sh --interface wlan0
+sudo ./packet-pid.sh --interface wlan0
 
 # Stop after capturing 300 packets
-sudo ./pidnetwatch.sh --interface eth0 --packets 300
+sudo ./packet-pid.sh --interface eth0 --packets 300
 
 # Stop after 2 minutes
-sudo ./pidnetwatch.sh --interface eth0 --minutes 2
+sudo ./packet-pid.sh --interface eth0 --minutes 2
 
 ```
 
